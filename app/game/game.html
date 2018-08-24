@@ -10,16 +10,14 @@
   <div class="container">
     <div class="well">
       <div>
-        <button ng-if="cell.color!='red'" class="btn-primary btn-lg" ng-repeat="cell in board[0]" ng-disabled="checkGameStatus()" ng-click="move(cell);">{{ cell.value }}</button>
-        <button  ng-if="cell.color=='red'" class="button1" ng-repeat="cell in board[0]" ng-disabled="checkGameStatus()" ng-click="move(cell);">{{ cell.value }}</button>
+        <button class="btn-primary btn-lg" ng-repeat="cell in board[0]" ng-disabled="checkGameStatus()" ng-click="move(cell);">{{ cell.value }}</button>
+        <!-- <button  ng-if="cell.color=='red'" class="button1" ng-repeat="cell in board[0]" ng-disabled="checkGameStatus()" ng-click="move(cell);">{{ cell.value }}</button> -->
       </div>
       <div>
-        <button ng-if="cell.color!='red'" class="btn-primary btn-lg" ng-repeat="cell in board[1]" ng-disabled="checkGameStatus()" ng-click="move(cell);">{{ cell.value }}</button>
-        <button  ng-if="cell.color=='red'" class="button1" ng-repeat="cell in board[1]" ng-disabled="checkGameStatus()" ng-click="move(cell);">{{ cell.value }}</button>
+        <button class="btn-primary btn-lg" ng-repeat="cell in board[1]" ng-disabled="checkGameStatus()" ng-click="move(cell);">{{ cell.value }}</button>
       </div>
       <div>
-        <button ng-if="cell.color!='red'" class="btn-primary btn-lg" ng-repeat="cell in board[2]" ng-disabled="checkGameStatus()" ng-click="move(cell);">{{ cell.value }}</button>
-        <button ng-if="cell.color=='red'" class="button1" ng-repeat="cell in board[2]" ng-disabled="checkGameStatus()" ng-click="move(cell);">{{ cell.value }}</button>
+        <button  class="btn-primary btn-lg" ng-repeat="cell in board[2]" ng-disabled="checkGameStatus()" ng-click="move(cell);">{{ cell.value }}</button>
       </div>
       <br/>
       <p>

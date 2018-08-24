@@ -1,0 +1,29 @@
+*{
+  text-align: center;
+  font-family: "Courier";
+}
+
+body {
+  font-family: "Verdana";
+}
+
+.buttonNewGame{
+  width: 1500px;
+  height: 200px;
+  font-size: 25px;
+}
+button{
+  width: 200px;
+  height: 200px;
+  background-color : mediumaquamarine;
+  font-size: 50px;
+  
+}
+
+.button1{
+  width: 200px;
+  height: 200px;
+  background-color : red;
+  font-size: 50px;
+  
+}

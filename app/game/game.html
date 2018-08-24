@@ -1,0 +1,45 @@
+<html ng-app="app">
+
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+</head>
+
+<body ng-controller="gameController">
+  <h1>Tic Tac Toe!</h1>
+
+  <div class="container">
+    <div class="well">
+      <div>
+        <button ng-if="cell.color!='red'" class="btn-primary btn-lg" ng-repeat="cell in board[0]" ng-disabled="checkGameStatus()" ng-click="move(cell);">{{ cell.value }}</button>
+        <button  ng-if="cell.color=='red'" class="button1" ng-repeat="cell in board[0]" ng-disabled="checkGameStatus()" ng-click="move(cell);">{{ cell.value }}</button>
+      </div>
+      <div>
+        <button ng-if="cell.color!='red'" class="btn-primary btn-lg" ng-repeat="cell in board[1]" ng-disabled="checkGameStatus()" ng-click="move(cell);">{{ cell.value }}</button>
+        <button  ng-if="cell.color=='red'" class="button1" ng-repeat="cell in board[1]" ng-disabled="checkGameStatus()" ng-click="move(cell);">{{ cell.value }}</button>
+      </div>
+      <div>
+        <button ng-if="cell.color!='red'" class="btn-primary btn-lg" ng-repeat="cell in board[2]" ng-disabled="checkGameStatus()" ng-click="move(cell);">{{ cell.value }}</button>
+        <button ng-if="cell.color=='red'" class="button1" ng-repeat="cell in board[2]" ng-disabled="checkGameStatus()" ng-click="move(cell);">{{ cell.value }}</button>
+      </div>
+      <br/>
+      <p>
+        <div ng-show="message">
+          <font color="red">This space is taken, please choose again</font>
+        </div>
+        <span ng-hide="winner || draw">Current Player: {{ currentPlayer }}</span>
+        <span ng-show="winner">
+          <font color="blue">Player {{ currentPlayer }} won! Click 'New Game' to play again</font>
+        </span>
+        <span ng-show="draw">
+          <font color="blue">draw! Click 'New Game' to play again</font></font>
+        </span>
+      </p>
+    </div>
+  </div>
+
+  <button ng-click="reset();" class="buttonNewGame">New Game</button>
+  <script src="game.js"></script>
+  <link rel="stylesheet" href="style.css">
+</body>
+
+</html>
